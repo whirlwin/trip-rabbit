@@ -1,5 +1,22 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  div.jumbotron.jumbotron-large
+    div.container
+      img.rabbit-logo(src='images/rabbit.png')
+      h1
+        span.red-text Trip
+        span Rabbit
+      h2 Din guide til eventyrlige gutteturer
+      a.btn.btn-lg.btn-primary(href='#') Gå til Praha 2015
+  div.container
+    div.row
+      div.col-md-4
+        a
+          h2 Budapest 2015
+      div.col-md-4
+        a
+          h2 Praha 2014
+      div.col-md-4
+        a
+          h2 Krakow 2013

@@ -1,4 +1,5 @@
 var indexRoute = require('../routes/index');
+var pragueRoute = require('../routes/prague');
 
 function configure(app) {
     setUpRoutes(app);
@@ -9,6 +10,7 @@ function configure(app) {
 
 function setUpRoutes(app) {
     app.use('/', indexRoute);
+    app.use('/2015/praha', pragueRoute);
 }
 
 function configure404handler(app) {

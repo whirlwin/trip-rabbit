@@ -1,8 +1,23 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    background-color: #000;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
-  color: #00B7FF;
+    color: #00B7FF;
 }
+
+.rabbit-logo {
+    float: right;
+    height: 30%;
+    width: 30%;
+}
+
+.jumbotron-large {
+}
+
+.red-text {
+    color: crimson;
+}
+
+
