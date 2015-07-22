@@ -1,5 +1,6 @@
 var indexRoute = require('../routes/index');
 var pragueRoute = require('../routes/prague');
+var passport = require('passport');
 
 function configure(app) {
     setUpRoutes(app);
@@ -11,6 +12,9 @@ function configure(app) {
 function setUpRoutes(app) {
     app.use('/', indexRoute);
     app.use('/2015/praha', pragueRoute);
+    app.use('/auth/facebook', passport.authenticate('facebook'));
+    app.use('/auth/facebook/callback',
+        passport.authenticate('facebook', { successRedirect: '/', failureRedirect: '/failed' }));
 }
 
 function configure404handler(app) {
