@@ -7,16 +7,19 @@ block content
   div.container
     ul.nav.nav-tabs
       li.active(role='presentation')
-        a(href='#general', data-nav-pill='general') Generelt
+        a(href='#generelt', data-nav-pill='general') Generelt
         li(role='presentation')
-          a(href='#dining', data-nav-pill='dining') Spisesteder
+          a(href='#spisesteder', data-nav-pill='dining') Spisesteder
         li(role='presentation')
-          a(href='#clubs', data-nav-pill='clubs') Klubber
+          a(href='#klubber', data-nav-pill='clubs') Klubber
         li(role='presentation')
-          a(href='#strip-clubs', data-nav-pill='strip-clubs') Strippeklubber
+          a(href='#strippeklubber', data-nav-pill='strip-clubs') Strippeklubber
+        li(role='presentation')
+          a(href='#hotell', data-nav-pill='hotel') Hotellet
     div.current-content
       include general
       include dining
       include clubs
       include strip-clubs
+      include hotel
   script(src='/javascripts/prague.js')

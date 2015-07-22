@@ -23,4 +23,18 @@
     function removeActive(el) {
         el.parentNode.classList.remove('active');
     }
+
+    var nextGifBtn = document.querySelector('[data-next-gif]');
+    var nextGifF = nextGif();
+    nextGifBtn.addEventListener('click', nextGifF);
+
+    function nextGif() {
+        var gifs = ['/images/trust-me-ok.gif', '/images/show-some-class.gif', '/images/deal-with-it.gif'];
+        var i = 0;
+        return function() {
+            i++;
+            var gifHolder = document.querySelector('[data-gif-holder]');
+            gifHolder.setAttribute('src', gifs[i % 3]);
+        }
+    }
 })();
